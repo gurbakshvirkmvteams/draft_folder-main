@@ -1,0 +1,368 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_banner_Eb6tKc": {
+      "type": "hero-banner",
+      "name": "Custom Hero Section",
+      "settings": {
+        "hero_image": "shopify://shop_images/hero_banner.png",
+        "discount_amount": "25%",
+        "hero_heading": "Summer Sale",
+        "hero_description": "Discover our summer styles with discount",
+        "button_text": "Shop Now"
+      }
+    },
+    "6a3bb789-ce10-45f5-ae67-e2063ef8c76b": {
+      "type": "image-banner",
+      "blocks": {
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Generated test data",
+            "heading_size": "h1"
+          }
+        },
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-1": {
+          "type": "text",
+          "settings": {
+            "text": "A theme and populated test store by Shopify to help you test commerce primitives.",
+            "text_style": "body"
+          }
+        },
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop products",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-0",
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-1",
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-2"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/theme_cover_image.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "<strong>Featured products</strong>",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "automated-collection",
+        "products_to_show": 10,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "f1552b18-6017-4231-810d-74e61da22c37": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stay hydrated",
+            "heading_size": "h1"
+          }
+        },
+        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try our wax subscription so you can fly high, but never dry.</p>",
+            "text_style": "body"
+          }
+        },
+        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get waxy now",
+            "button_link": "shopify://products/selling-plans-ski-wax"
+          }
+        }
+      },
+      "block_order": [
+        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-0",
+        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-1",
+        "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/theme_cover_image.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "38cdf60f-e431-43b5-aac3-7e6215447d67": {
+      "type": "collection-list",
+      "blocks": {
+        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hydrogen"
+          }
+        },
+        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "automated-collection"
+          }
+        }
+      },
+      "block_order": [
+        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-0",
+        "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "<strong>Collections</strong>",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_H93gme": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Explore our latest drops",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "subtitle",
+        "collection": "sneakers",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_products_cUiBEx": {
+      "type": "featured-products",
+      "name": "Custom Featured Section",
+      "settings": {
+        "section_heading": "Explore our latest drops",
+        "collection": "sneakers"
+      }
+    },
+    "ingredient_tVLNRd": {
+      "type": "ingredient",
+      "blocks": {
+        "heading_ch8Pjb": {
+          "type": "heading",
+          "settings": {
+            "heading": "The formula behind the ritual.",
+            "heading_font_size": 32,
+            "heading_text_color": "#000000",
+            "text_transform": "uppercase"
+          }
+        },
+        "description_RLHrba": {
+          "type": "description",
+          "settings": {
+            "description": "Every ingredient was selected to support hydration, recovery, performance, and mental clarity without unnecessary fillers or sugar."
+          }
+        },
+        "tab_QL8x6i": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Focus",
+            "title": "L-Theanine — 200mg",
+            "description": "Promotes calm, sustained mental clarity. Works synergistically with natural caffeine for clean energy without the crash."
+          }
+        },
+        "tab_LBHb8m": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Hydration",
+            "title": "Electrolyte Blend — 1.2g",
+            "description": "Replenishes sodium, potassium, and magnesium lost through sweat to keep you performing at your peak."
+          }
+        },
+        "tab_apdH36": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Supports Strength",
+            "title": "Creatine Monohydrate — 5g",
+            "description": "Supports strength, recovery, and cognitive performance. One of the most researched performance compounds in the world."
+          }
+        }
+      },
+      "block_order": [
+        "heading_ch8Pjb",
+        "description_RLHrba",
+        "tab_QL8x6i",
+        "tab_LBHb8m",
+        "tab_apdH36"
+      ],
+      "name": "Ingredient Details",
+      "settings": {
+        "label": "Ingredient Science",
+        "padding_top": 80,
+        "padding_bottom": 100
+      }
+    },
+    "custom_faq_wmEAiL": {
+      "type": "custom-faq",
+      "blocks": {
+        "faq_wTNPtK": {
+          "type": "faq",
+          "settings": {
+            "question": "Will it fit my boat?",
+            "answer": "<p>The universal clip system fits any transom 6\"–24\" — pontoons, runabouts, ski boats, deck boats, even fixed docks. If it doesn’t fit yours, send a photo of your stern and we’ll refund you on the spot.</p>"
+          }
+        },
+        "faq_ewJBaR": {
+          "type": "faq",
+          "settings": {
+            "question": "How heavy a dog can it really hold?",
+            "answer": "<p>The ramp is built for medium to extra-large dogs and supports up to approximately 200–210 lbs depending on the model size and inflation level. The reinforced drop-stitch PVC construction keeps it stable even when large dogs climb aboard.</p>"
+          }
+        },
+        "faq_ErGV4y": {
+          "type": "faq",
+          "settings": {
+            "question": "What happens if it gets punctured?",
+            "answer": "<p>The ramp is made from heavy-duty PVC designed to resist claws and abrasion, but if punctured it can usually be repaired quickly using the included repair patch kit. Small punctures generally do not make the ramp unusable immediately</p>"
+          }
+        },
+        "faq_Jhk9YL": {
+          "type": "faq",
+          "settings": {
+            "question": "Does it work for senior or arthritic dogs?",
+            "answer": "<p>Yes. The submerged mesh entry and EVA non-slip surface help older or arthritic dogs enter the ramp gradually instead of needing to jump. Many owners use these ramps specifically to reduce lifting strain and joint stress</p>"
+          }
+        },
+        "faq_drE37q": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does the pump battery last?",
+            "answer": "<p>The included electric pump typically inflates the ramp in a few minutes per charge. Exact runtime depends on the pump model, but most rechargeable pumps can handle multiple inflations before recharging. Manual inflation options may also be supported depending on the package selected</p>"
+          }
+        },
+        "faq_F833pq": {
+          "type": "faq",
+          "settings": {
+            "question": "Saltwater okay?",
+            "answer": "<p>Yes. The PVC and EVA materials are suitable for both freshwater and saltwater use. For longest lifespan, rinse the ramp with clean water after saltwater exposure and allow it to dry before storage</p>"
+          }
+        },
+        "faq_9XgJaa": {
+          "type": "faq",
+          "settings": {
+            "question": "Shipping time?",
+            "answer": "<p>Shipping time depends on your location and the AliExpress warehouse used. Most orders are processed within a few days, with estimated delivery commonly ranging from 1–3 weeks internationally</p>"
+          }
+        },
+        "faq_Ri987n": {
+          "type": "faq",
+          "settings": {
+            "question": "What if my dog hates it?",
+            "answer": "<p>Most dogs adapt quickly after a short introduction. Training with treats or toys usually helps during the first use. The high-visibility colors and gradual water entry are designed to make dogs feel comfortable and confident in the water.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_wTNPtK",
+        "faq_ewJBaR",
+        "faq_ErGV4y",
+        "faq_Jhk9YL",
+        "faq_drE37q",
+        "faq_F833pq",
+        "faq_9XgJaa",
+        "faq_Ri987n"
+      ],
+      "name": "Faq Section",
+      "settings": {
+        "section_heading": "ASKED. ANSWERED.",
+        "section_subheading": "NO BS.",
+        "tagline": "Don’t see your question? Hit us up — a human will reply within an hour.",
+        "button_text": "Email Support",
+        "button_link": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "hero_banner_Eb6tKc",
+    "6a3bb789-ce10-45f5-ae67-e2063ef8c76b",
+    "featured_collection",
+    "f1552b18-6017-4231-810d-74e61da22c37",
+    "38cdf60f-e431-43b5-aac3-7e6215447d67",
+    "featured_collection_H93gme",
+    "featured_products_cUiBEx",
+    "ingredient_tVLNRd",
+    "custom_faq_wmEAiL"
+  ]
+}

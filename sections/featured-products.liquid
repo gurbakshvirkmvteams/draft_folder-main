@@ -1,0 +1,147 @@
+{%- style -%}
+  .main-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1156px;
+  }
+  .card a {
+    text-decoration: none;
+  }
+  .featured-section h2 {
+    text-align: left;
+    font-weight: 700;
+    font-size: clamp(28px, 5vw, 36px);
+    line-height: clamp(36px, 5vw, 48px);
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    margin-top:10px;
+  }
+  .featured-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .image-container {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+  }
+  .product-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .image-container:hover .product-image {
+    transform: scale(1.05)
+  }
+  .card-text-container {
+    text-align: left;
+  }
+  .card-text-container h3 {
+    font-weight: 700;
+    font-size: clamp(16px, 5vw, 20px);
+    line-height: clamp(18px, 5vw, 24px);
+    letter-spacing: 0.5px;
+    margin: 18px 0 6px;
+  }
+  .card-text-container p {
+    margin: 0;
+    font-weight: 400;
+    font-size: clamp(14px, 5vw, 16px);
+    line-height: clamp(16px, 5vw, 18px);
+    letter-spacing: 0;
+    color: #67696E;
+  }
+  .card-text-container span {
+    display: inline-block;
+    font-weight: 500;
+    font-size: clamp(16px, 5vw, 18px);
+    line-height: clamp(20px, 5vw, 24px);
+    letter-spacing: -0.5px;
+    margin-top: 14px;
+    color: #201B21;
+  }
+  @media(max-width: 768px) {
+    .featured-cards-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media(max-width: 576px) {
+    .featured-section h2 {
+      margin-bottom: 24px;
+    }
+  }
+  @media(max-width: 360px) {
+
+    .featured-cards-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+{%- endstyle -%}
+
+{% if section.settings.section_heading != blank %}
+  <div class="featured-section main-container">
+    {% if section.settings.section_heading != blank %}
+      <h2>{{ section.settings.section_heading }}</h2>
+    {% endif %}
+    {% if section.settings.collection != blank %}
+      <div class="featured-cards-container">
+        {% comment %} <div class="featured-card">
+                                        <div class="image-container">
+                                          {{ section.settings.testing_image | image_url: width: 500 | image_tag: class: 'product-image', loading: 'lazy' }}
+                                        </div>
+                                        <div class="card-text-container">
+                                          <h3>Off-white</h3>
+                                          <p>Out Of Office "Ooo" sneakers</p>
+                                          <span>$775</span>
+                                        </div>
+                                </div> {% endcomment %}
+
+        {% for product in section.settings.collection.products limit: 4 %}
+          <div class="card">
+            <a href="{{ product.url }}">
+              <div class="image-container">
+                {{
+                  product.featured_image | image_url: width: 500 | image_tag: class: 'product-image'
+                }}
+              </div>
+
+              <div class="card-text-container">
+                <h3>{{ product.title }}</h3>
+                <p>{{ product.description | strip_html | truncate: 50 }}</p>
+                <span>{{ product.price | money }}</span>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Featured Collection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_heading",
+        "label": "Add Section Heading"
+      }, {
+        "type": "collection",
+        "id": "collection",
+        "label": "t:sections.featured-collection.settings.collection.label"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Featured Section"
+      }
+    ]
+  }
+{% endschema %}

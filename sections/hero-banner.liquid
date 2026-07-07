@@ -1,0 +1,210 @@
+{%- style -%}
+  .main-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    max-width: 1156px;
+  }
+  .hero-section {
+    max-width: 1116px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 427px;
+    background: #eaeeef;
+    border-radius: 30px;
+    padding: 53px;
+    gap: 20px;
+    margin-top:32px;
+    margin-bottom:64px;
+  }
+  .right-image-container {
+    max-width: 490px;
+    width: 100%;
+    max-height: 321px;
+  }
+  .right-image-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .left-text-container h2 {
+    font-weight: 900;
+    font-size: clamp(36px, 5vw, 48px);
+    line-height: 56px;
+    letter-spacing: -1px;
+    color: #ec5e2a;
+    margin: 11px 0 0;
+    text-align: left;
+  }
+  .left-text-container h1 {
+    font-weight: 700;
+    font-size: clamp(48px, 5vw, 64px);
+    line-height: 73px;
+    letter-spacing: 1px;
+    margin: 8px 0 0;
+    text-align: left;
+  }
+  .left-text-container p {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: clamp(14px, 5vw, 20px);
+    line-height: 30px;
+    letter-spacing: 0;
+    margin: 20px 0 48px;
+    text-align: left;
+  }
+  .left-text-container button {
+    border-radius: 10px;
+    padding: 20px 80px;
+    font-weight: 700;
+    font-size: clamp(16px, 5vw, 18px);
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #ffffff;
+    background: #201b21;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+  }
+  @media (max-width: 1000px) {
+    .hero-section {
+      padding: 32px;
+    }
+    .left-text-container h2 {
+      font-weight: 700;
+    }
+    .left-text-container h1 {
+      white-space: nowrap;
+    }
+    .left-text-container p {
+      margin: 20px 0 28px;
+    }
+    .left-text-container button {
+      border-radius: 10px;
+      padding: 20px 60px;
+      font-weight: 700;
+      font-style: Bold;
+    }
+  }
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column-reverse;
+      padding: 32px 24px;
+    }
+    .left-text-container h2 {
+      line-height: 56px;
+    }
+    .left-text-container h1 {
+      line-height: 54px;
+    }
+    .left-text-container h2,
+    .left-text-container h1,
+    .left-text-container p {
+      text-align: center;
+    }
+    .left-text-container h1,
+    .left-text-container h2 {
+      margin: 0;
+    }
+    .left-text-container p {
+      margin: 20px 0 36px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .left-text-container {
+      width: 100%;
+    }
+    .left-text-container button {
+      width: 100%;
+      justify-content: center;
+    }
+    .right-image-container {
+      max-width: 207px;
+      max-height: 136px;
+    }
+  }
+  @media (max-width: 360px) {
+    .left-text-container h1 {
+      white-space: wrap;
+    }
+  }
+{%- endstyle -%}
+
+{% if section.settings.hero_image != blank %}
+  <div class="main-container">
+    <div class="hero-section">
+      <div class="left-text-container">
+        {% if section.settings.discount_amount != blank %}
+          <h2>{{ section.settings.discount_amount }} OFF</h2>
+        {% endif %}
+        {% if section.settings.hero_heading != blank %}
+          <h1>{{ section.settings.hero_heading }}</h1>
+        {% endif %}
+        {% if section.settings.hero_description != blank %}
+          <p>{{ section.settings.hero_description }}</p>
+        {% endif %}
+        {% if section.settings.button_text != blank %}
+          <button>
+            {{ section.settings.button_text -}}
+            <img
+              src="{{ 'arrow-right.svg' | asset_url }}"
+              alt="Arrow right Icon"
+              width="14"
+              height="12"
+            >
+          </button>
+        {% endif %}
+      </div>
+      <div class="right-image-container">
+        {% if section.settings.hero_image != blank %}
+          {{
+            section.settings.hero_image
+            | image_url: width: 1200
+            | image_tag: loading: 'lazy', alt: section.settings.hero_heading
+          }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Custom Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Choose Image"
+    },
+    {
+      "type": "text",
+      "id": "discount_amount",
+      "label": "Add discount"
+    },
+    {
+      "type": "text",
+      "id": "hero_heading",
+      "label": "Add a Heading"
+    },
+    {
+      "type": "text",
+      "id": "hero_description",
+      "label": "Add hero tagline"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Add Button Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Hero Section"
+    }
+  ]
+}
+{% endschema %}

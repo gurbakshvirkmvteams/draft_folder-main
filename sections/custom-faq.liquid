@@ -1,0 +1,151 @@
+<link
+  rel="stylesheet"
+  href="{{ 'custom-faq.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'"
+>
+
+{% if section.settings.section_heading != blank %}
+  <div class="custom-faq-section-container"  style="
+    padding-top:{{ section.settings.padding_top }}px;
+    padding-bottom:{{ section.settings.padding_bottom }}px;
+  ">
+    <div class="custom-faq-heading-container">
+      <div>
+        <h1 class="custom-faq-heading">{{ section.settings.section_heading }}</h1>
+        <h1 class="custom-faq-heading custom-subheading">{{ section.settings.section_subheading }}</h1>
+      </div>
+      <p class="custom-faq-description">{{ section.settings.tagline }}</p>
+      <div class="faq-button-wrapper">
+        <a href="{{ section.settings.button_link }}" class="custom-faq-button">
+          {{ section.settings.button_text }}
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="custom-faq-wrapper" >
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'faq' %}
+            <div class="custom-question-body" {{ block.shopify_attributes }}>
+              <h2 class="custom-question">
+                {{ block.settings.question }}
+                <span class="product-faqs__icon">
+                  <svg
+                    class="product-faqs__icon-plus"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                  </svg>
+                  <svg
+                    class="product-faqs__icon-minus"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                  </svg>
+                </span>
+              </h2>
+
+              <div class="custom-answer">{{ block.settings.answer }}</div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+<script>
+  const customQuestion = document.querySelectorAll('.custom-question');
+  customQuestion.forEach((question) => {
+    question.addEventListener('click', () => {
+      question.parentElement.classList.toggle('active');
+    });
+  });
+  // customQuestion[0].style.borderTop = "2px solid var(--border-color, #d8ddd9)";
+</script>
+{% schema %}
+{
+  "name": "Faq Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Add section heading"
+    },
+    {
+      "type": "text",
+      "id": "section_subheading",
+      "label": "Section Subheading",
+      "default": "Add section Sub-heading"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Add a Tagline"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Faq",
+      "type": "faq",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Add Question",
+          "default": "Customer Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Add Answer",
+          "default": "<p>Our Answer</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Faq Section"
+    }
+  ]
+}
+{% endschema %}

@@ -32,6 +32,8 @@ added Used Adjustable padding and margin settins to the page
 -- Added accordion dropdowns with Js for answers to the questions
 -- Made section UI responsive
 --added section custom settings for font sizes and paddings
+-- Shopify dev docs of cart api 
+-- Shopify dev docs of sections rendering api's
 
 
-
+            {{ product.selected_or_first_available_variant.metafields.custom.heel_type.value }}

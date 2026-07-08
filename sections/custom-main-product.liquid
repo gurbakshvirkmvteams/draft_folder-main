@@ -3,6 +3,19 @@
   class="page-width custom-page-width section-{{ section.id }}-padding"
   data-section="{{ section.id }}"
 >
+{% comment %} 
+{%- if product.metafields.custom.shoe_lace_color != blank -%}
+<p>
+ {{ product.metafields.custom.shoe_lace_color.value }}
+</p>
+{%- endif -%}
+
+{%- for value in product.metafields.custom.shoe_features.value -%}
+ {{ value }} <br />
+{%- endfor -%}
+ {% endcomment %}
+
+
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -309,6 +322,9 @@
               %}
 
             {%- when 'variant_picker' -%}
+            {% comment %} <div class="heel-type" id="HeelType">
+  {{ product.selected_or_first_available_variant.metafields.custom.heel_type.value }}
+</div> {% endcomment %}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
             {%- when 'buy_buttons' -%}
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}

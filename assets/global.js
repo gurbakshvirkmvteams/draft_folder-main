@@ -923,6 +923,7 @@ class VariantSelects extends HTMLElement {
     fetch(`${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
       .then((response) => response.text())
       .then((responseText) => {
+        console.log("responseText", responseText)
         // prevent unnecessary ui changes from abandoned selections
         if (this.currentVariant.id !== requestedVariantId) return;
 

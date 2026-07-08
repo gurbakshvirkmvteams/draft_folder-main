@@ -34,6 +34,16 @@ added Used Adjustable padding and margin settins to the page
 --added section custom settings for font sizes and paddings
 -- Shopify dev docs of cart api 
 -- Shopify dev docs of sections rendering api's
+{{ product.selected_or_first_available_variant.metafields.custom.heel_type.value }}
 
 
-            {{ product.selected_or_first_available_variant.metafields.custom.heel_type.value }}
+
+# Shopify 
+-- Read Objects Concepts from Shoify dev docs.
+-- Practiced Shopify Cart Api Using different variations of same product.
+-- Read About MetaFields.
+-- Created custom product metafields.
+-- Created a custom product details page for practice.
+-- Created a Custom section to use custom created product MetaFields.
+-- Rendered product details via Metafields.
+-- Started Custom media render section to render product with the help of swiper js

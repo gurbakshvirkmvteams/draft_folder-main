@@ -1,58 +1,57 @@
 {% style %}
-  .custom-product-gift-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-  }
-  .gift-section-heading {
-    font-size: clamp(18px, 2vw, 28px);
-    font-weight: 700;
-    margin: 0 0 20px;
-  }
+.custom-product-gift-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.gift-section-heading {
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+.custom-product-gift {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #f5f5f5;
+  max-width: 700px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.custom-product-gift-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+.custom-product-gift-text h2 {
+  font-size: clamp(20px, 2.5vw, 24px);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.custom-product-gift-text p {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 500;
+  margin: 0 0 5px;
+}
+.custom-product-gift-text ul {
+  list-style-type: none; 
+  padding-left: 0;
+  margin: 0;
+}
+@media (max-width: 576px) {
   .custom-product-gift {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    background-color: #f5f5f5;
-    max-width: 700px;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 20px;
   }
-  .custom-product-gift-text {
-    display: flex;
+  .custom-product-gift{
     flex-direction: column;
-    max-width: 400px;
+    align-items: center;
   }
-  .custom-product-gift-text h2 {
-    font-size: clamp(20px, 2.5vw, 24px);
-    font-weight: 600;
-    margin: 0 0 20px;
-  }
-  .custom-product-gift-text p {
-    font-size: clamp(16px, 2vw, 18px);
-    font-weight: 500;
-    margin: 0 0 5px;
-  }
-  .custom-product-gift-text ul {
-    list-style-type: none; 
-    padding-left: 0;
-    margin: 0;
-  }
-  @media (max-width: 576px) {
-    .custom-product-gift {
-      gap: 20px;
-    }
-    .custom-product-gift{
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+}
 {% endstyle %}
 
-{% comment %} {{ product.metafields.custom.gifts.value | json }} {% endcomment %}
 {% if product.metafields.custom.gifts.value != blank %}
   <div class="custom-product-gift-wrapper custom-page-width" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
     <h2 class="gift-section-heading">Gift Included</h2>

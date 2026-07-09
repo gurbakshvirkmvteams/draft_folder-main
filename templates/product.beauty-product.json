@@ -104,15 +104,24 @@
       "type": "product-description",
       "name": "Product Description",
       "settings": {
-        "heading": "Descriptio",
+        "heading": "Description",
         "description": "<p>Energize your look with a fresh take on heritage adidas style. The adidas Daily 3.0 Shoes cut a classic profile with a modern suede upper.</p><ul><li>Regular fit</li><li>Lace closure</li><li>Rubber outsole with vulcanized look</li><li>Imported</li></ul>",
         "image": "shopify://shop_images/Rectangle_1534_2.png"
+      }
+    },
+    "custom_product_details_VDgtiP": {
+      "type": "custom-product-details",
+      "name": "Product description meta",
+      "settings": {
+        "padding_top": 32,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "product_description_xLnLnc"
+    "product_description_xLnLnc",
+    "custom_product_details_VDgtiP"
   ]
 }
